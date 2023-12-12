@@ -41,6 +41,60 @@ def brincar_de_plim(fim):
         else:
             print('{:0>3}'.format(numero))
 
+def exibir_dia_da_semana_if(numero):
+    print('Execução com IF')
+    if numero == 2:
+        print('O dia é segunda')
+    elif numero == 3:
+        print('O dia é terça')
+    elif numero == 4:
+        print('O dia é quarta')
+    elif numero == 5:
+        print('O dia é quinta')
+    elif numero == 6:
+        print('O dia é sexta')
+    elif numero == 7:
+        print('O dia é sábado')
+    elif numero == 1:
+        print('O dia é domingo')
+    else:
+        print('Número de dia inválido. Digite um numero de 1 a 7')
+'''
+def exibir_dia_da_semana_match(numero):
+    print('Execução com Match')
+    match numero:
+        case 2:
+            print('O dia é segunda')
+            exit()
+        case 3:
+            print('O dia é terça')
+            exit()
+        case 4:
+            print('O dia é quarta')
+            exit()
+        case 5:
+            print('O dia é quinta')
+            exit()
+        case 6:
+            print('O dia é sexta')
+            exit()
+        case 7:
+            print('O dia é sábado')
+            exit()
+        case 1:
+            print('O dia é domingo')
+            exit()
+        case _:
+            print('Número de dia inválido. Digite um numero de 1 a 7')
+'''
+def brincar_de_para_ou_continua():
+    resposta = 'c' # c aqui significa continua
+
+    while resposta == 'c' or resposta == 'C':
+        resposta = input('Digite p para parar ou c para continuar ou qualquer outro caracter para parar')
+
+    print('Você decidiu parar com a brincadeira')
+
 # Estrutura de identificação / execução do script
 if __name__ == '__main__':
     print_hi('Claudio')
@@ -65,3 +119,12 @@ if __name__ == '__main__':
 
     # brincar de plim
     brincar_de_plim(100)
+
+    # exemplo de dia da semana com if - elif - else
+    exibir_dia_da_semana_if(0)
+
+    # exemplo de dia da semana com match - case
+    #exibir_dia_da_semana_match(2)
+
+    # exemplo com while - para ou continua
+    brincar_de_para_ou_continua()
